@@ -11,32 +11,21 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 300;
   line-height: 1.1;
 }
 
 h1{
-  font-size: 2.4em
+  font-weight: 300;
+  font-size: 2.4em;
 }
 
-h2 {
-  font-size: 2em
-}
-
-h3 {
-  font-size: 1.6em
-}
-
-h4 {
-  font-size: 1.36em
-}
-
-h5 {
-  font-size: 1.2em
-}
-
+h2,
+h3,
+h4,
+h5,
 h6 {
-  font-size: 1.1em
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
 body {
@@ -80,8 +69,22 @@ aside {
     color: @sidebar-link-color;
   }
 
+  a.active {
+    color: @sidebar-link-hover-color;
+    background-color: @sidebar-link-hover-bg;
+    padding: .0em .4em .1em .4em;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    }
+
   a:hover {
     color: @sidebar-link-hover-color;
+    background-color: @sidebar-link-hover-bg;
+    padding: .0em .4em .1em .4em;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
   }
 
   div {
@@ -94,7 +97,12 @@ aside {
     }
 
     h1 {
-      margin: 15px 0 5px 0;
+      margin: 40px 0 40px 0;
+
+      a:hover {
+        color: @sidebar-link-color;
+        background-color: @sidebar-bg;
+      }
     }
 
     p {
@@ -183,17 +191,15 @@ main {
     }
 
     blockquote, pre {
-      background-color: rgba(128,128,128,0.05);
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
-      border-left: 8px solid rgba(128,128,128,0.075);
-      border-left-width: 10px;
+      border-left: 8px solid;
+      border-left-width: 4px;
     }
 
     blockquote {
       padding: 10px 20px;
-      font-weight: 300;
-      font-size: 1.1em;
+      margin-left: 0px;
     }
 
     pre {
@@ -248,6 +254,15 @@ main {
         line-height: 20px;
         vertical-align: top;
         border-top: 1px solid #ddd;
+      }
+    }
+
+    div {
+      dl {
+        dd {
+          display: block;
+          margin-left: 0px;
+        }
       }
     }
   }

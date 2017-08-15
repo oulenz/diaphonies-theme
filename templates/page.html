@@ -4,10 +4,10 @@
 
 {% block content %}
 <article class="single">
+  <div class="neighbors"></div>
   <header>
-    {% import 'partial/translations.html' as translations with context %}
-    {{ translations.translations_for(page) }}
     <h1 id="{{ page.slug }}">{{ page.title }}</h1>
+    <p>&nbsp;</p>
   </header>
   <div>
     {% block before_content %}{% endblock %}
