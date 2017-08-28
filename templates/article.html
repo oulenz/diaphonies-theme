@@ -18,7 +18,7 @@
   <header>
     <h1 id="{{ article.slug }}">{{ article.title }}</h1>
     <p>
-      {{ _('Posted on %(when)s',
+      {{ _('Published on %(when)s',
            when=article.locale_date) }}
 
       {% if 'post_stats' in PLUGINS %}
